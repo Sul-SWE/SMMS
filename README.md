@@ -1,4 +1,4 @@
-#Student Marks Management System  
+#Student Marks Management System#  
 A full-stack web application designed for academic record management, focusing on 
 automated grading and relational data integrity.  
 1. Project Overview  
