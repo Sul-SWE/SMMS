@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginPage" class="flex-center">
+        <div class="card login-box">
+            <h2>Teacher Login</h2>
+            <input type="text" id="adminUser" placeholder="Username">
+            <input type="password" id="adminPass" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="mainDashboard" class="container" style="display:none;">
+        <header>
+            <h1>Academic System</h1>
+            <button class="logout-btn" onclick="location.reload()">Logout</button>
+        </header>
+
+        <!-- Search Feature -->
+        <div class="card">
+            <h3>Search Student Result</h3>
+            <div class="input-group">
+                <input type="text" id="searchRoll" placeholder="Roll Number">
+                <button onclick="searchStudent()">Find</button>
+            </div>
+            <div id="searchOutput"></div>
+        </div>
+
+        <!-- Registration, Marks, Add/Edit Feature -->
+        <div class="card">
+            <h3>Manage Student Records</h3>
+            <form id="studentForm">
+                <input type="text" name="roll" id="formRoll" placeholder="Roll Number" required>
+                <input type="text" name="name" id="formName" placeholder="Full Name" required>
+                <div class="marks-inputs">
+                    <input type="number" name="marks[1]" placeholder="Math" required>
+                    <input type="number" name="marks[2]" placeholder="Science" required>
+                    <input type="number" name="marks[3]" placeholder="English" required>
+                </div>
+                <button type="submit">Save & Calculate</button>
+            </form>
+        </div>
+
+        <!-- Display & Delete Feature -->
+        <div class="card">
+            <h3>Final Results</h3>
+            <div id="resultsTable"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
